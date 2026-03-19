@@ -7,11 +7,11 @@ ZMK config (Ortholinix split, 48 keys) からのポート。
 
 ## 重要ルール
 
-**キーマップを変更したら必ず `KEYMAP.md` も更新すること。**
+**キーマップを変更したら必ず `docs/KEYMAP.md` も更新すること。**
 
 変更対象:
 - `keymaps/kohsuk/keymap.c` を編集した場合
-  → `KEYMAP.md` の該当レイヤーのASCII図・凡例を同期する
+  → `docs/KEYMAP.md` の該当レイヤーのASCII図・凡例を同期する
 
 ## 主要ファイル
 
@@ -19,8 +19,9 @@ ZMK config (Ortholinix split, 48 keys) からのポート。
 |---------|------|
 | `keymaps/kohsuk/keymap.c` | キーマップ本体（8レイヤー） |
 | `keymaps/kohsuk/config.h` | タッピング設定 |
-| `KEYMAP.md` | キーマップリファレンス（人間が読む用） |
-| `SETUP.md` | ビルド・フラッシュ手順 |
+| `docs/KEYMAP.md` | キーマップリファレンス（人間が読む用） |
+| `docs/SETUP.md` | 環境セットアップ手順 |
+| `docs/build-and-flash.md` | ビルド・フラッシュ手順 |
 | `flake.nix` | Nix 開発環境 |
 
 ## ビルド・フラッシュ
