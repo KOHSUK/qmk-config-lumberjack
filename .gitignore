@@ -1,0 +1,12 @@
+# Nix / direnv
+.direnv/
+
+# Build artifacts
+*.hex
+*.bin
+*.elf
+*.zip
+qmk/.build/
+
+# KLE layout export (generated file)
+peej_lumberjack_layout_ortho_5x12_*.json
