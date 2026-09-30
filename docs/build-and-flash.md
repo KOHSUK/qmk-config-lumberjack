@@ -66,9 +66,10 @@ sudo udevadm trigger
 
 ## ビルド
 
+以下のコマンドは、リポジトリのルートディレクトリで実行する。
+
 ```sh
-cd qmk
-make peej/lumberjack:kohsuk
+make -C qmk peej/lumberjack:kohsuk
 ```
 
 成功すると `qmk/peej_lumberjack_kohsuk.hex` が生成される。
@@ -94,8 +95,7 @@ USB-C を接続した状態で：
 ### 2. 書き込み
 
 ```sh
-cd qmk
-avrdude -c usbasp -p atmega328p -U flash:w:peej_lumberjack_kohsuk.hex:i
+avrdude -c usbasp -p atmega328p -U flash:w:qmk/peej_lumberjack_kohsuk.hex:i
 ```
 
 ### 3. 再起動
@@ -112,12 +112,12 @@ avrdude -c usbasp -p atmega328p -U flash:w:peej_lumberjack_kohsuk.hex:i
 $EDITOR keymaps/kohsuk/keymap.c
 
 # 2. ビルド
-cd qmk && make peej/lumberjack:kohsuk
+make -C qmk peej/lumberjack:kohsuk
 
 # 3. BOOT + RESET でブートローダーに入る
 
 # 4. フラッシュ
-avrdude -c usbasp -p atmega328p -U flash:w:peej_lumberjack_kohsuk.hex:i
+avrdude -c usbasp -p atmega328p -U flash:w:qmk/peej_lumberjack_kohsuk.hex:i
 ```
 
 **編集後は `KEYMAP.md` も更新すること。**
